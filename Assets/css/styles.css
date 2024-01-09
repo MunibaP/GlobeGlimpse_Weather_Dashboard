@@ -1,0 +1,93 @@
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/img_13.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    background-size: contain;
+    
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Prata', serif;
+	font-weight: bolder;
+	animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+	0% {
+	  opacity: 1;
+	  color:white;
+	}
+	25% {
+	  opacity: 0.8;
+	  color:white;
+	}
+	50% {
+	  opacity: 1;
+	  color:white;
+	}
+	75% {
+	  opacity: 0.9;
+	  color: white;
+	}
+	100% {
+	  opacity: 1;
+	  color: white;
+	}
+}
+
+.weather-search {
+    border: solid 3px black;
+    margin-bottom: 1em;
+}
+
+#search-button {
+    background-color: #b1e46b;
+    border: solid 3px black;
+    border-left: 0;
+    padding-left: 1em;
+}
+
+.card {
+    flex: content;
+}
+
+.today-card, .forecast-card{
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0.3em 0.3em 0 0 #9cd9fa;
+}
+
+#search-city-button i.bi-search {
+	color: white;
+	font-weight: bolder;
+}
+
+.city-btn:hover {
+	background-color: #f6f5f5;
+	cursor: pointer;
+}
+
+.colOne {
+	background-color: rgb(255, 255, 255);
+}
+
+.colTwo {
+	background-color: rgb(255, 255, 255);
+}
+
+.forecast-card{
+  margin:5px;
+
+}
+
+#forecast-title {
+  justify-content: right;
+}
