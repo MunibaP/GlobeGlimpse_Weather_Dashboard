@@ -1,7 +1,7 @@
 # GlobeGlimpse_Weather_Dashboard
 
 ## Description
-In this week challenge #6, I introduce the GlobeGlimpse Weather Dashboard – your go-to destination for real-time weather updates in an intuitive and visually appealing format! As a transitional web developer I was tasked to craft a dynamic weather dashboard that seamlessly runs in our browser, showcasing dynamically updated HTML, CSS and JavaScript for a ideal user experience. Harnessing the power of OpenWeatherMap's 5 Day Weather Forecast API, the GlobeGlimpse Weather Dashboard fetches the latest weather data for cities across the globe. In essence, building the GlobeGlimpse Weather Dashboard is not just about weather data; it's about transforming your weather-checking routine into a visually pleasing and user-friendly experience. Embrace the power of real-time updates and explore the world's weather with ease – all from the comfort of your browser. Stay connected, stay informed, and stay ahead with GlobeGlimpse!
+In this week challenge #6, I introduce the GlobeGlimpse Weather Dashboard – your go-to destination for real-time weather updates in an intuitive and visually appealing format! As a transitional web developer I was tasked to craft a dynamic weather dashboard that seamlessly runs in our browser, showcasing dynamically updated HTML, CSS and JavaScript for an ideal user experience. Harnessing the power of OpenWeatherMap's 5 Day Weather Forecast API, the GlobeGlimpse Weather Dashboard fetches the latest weather data for cities across the globe. In essence, building the GlobeGlimpse Weather Dashboard is not just about weather data; it's about transforming your weather-checking routine into a visually pleasing and user-friendly experience. Embrace the power of real-time updates and explore the world's weather with ease – all from the comfort of your browser. Stay connected, stay informed, and stay ahead with GlobeGlimpse!
 
 ## Acceptance Criteria
 GIVEN a weather dashboard with form inputs
@@ -24,7 +24,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## Technologies
 The technologies I used in this challenge includes:
-1. HTML: template working HTML file was  was created that structures the basic layout of the weather dashboard including the header, Aside section which includes: searchbox, search & clear history buttons. The main section includes: the current day weather as well as 5-day weather forecast. 
+1. HTML: template working HTML file was created that structures the basic layout of the weather dashboard including the header, aside section which includes: searchbox, search & clear history buttons. The main section includes: the current day weather as well as 5-day weather forecast. 
 2. CSS: template working CSS file was created which includes the necessary styling for the weather dashboard.
 3. Github: Github was used to create a repository which includes the links to the projects, assets folder, and the README file.
 4. Gitlab: Gitlab was used to clone the project to our laptop.
@@ -47,13 +47,14 @@ To clone: git clone https://github.com/your-username/repository-name.git
 
 ## Screenshot
 
- ![Weather Dashboard First](Assets/images/img_1.jpeg)    
+ ![Weather Dashboard First](Assets/images/img_0.jpeg)    
 
- ![Weather Dashboard Second](Assets/images/img_2.jpeg)  
+ ![Weather Dashboard Second](Assets/images/img_1.jpeg)  
 
- ![Weather Dashboard Third](Assets/images/img_3.jpeg)  
+ ![Weather Dashboard Third](Assets/images/img_2.jpeg) 
+
+ ![Weather Dashboard Third](Assets/images/img_3.jpeg) 
  
-
 ## Resources
 [Open Weather Map_5-Day Forecast ](https://openweathermap.org/forecast5)
 
@@ -61,9 +62,9 @@ To clone: git clone https://github.com/your-username/repository-name.git
 
 ## Links
 
-[GitHub Repository link]()
+[GitHub Repository link](https://github.com/MunibaP/GlobeGlimpse_Weather_Dashboard.git)
 
-[Deployment link]()
+[Deployment link](https://munibap.github.io/GlobeGlimpse_Weather_Dashboard/)
 
 ## License
 
