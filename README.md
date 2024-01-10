@@ -47,13 +47,13 @@ To clone: git clone https://github.com/your-username/repository-name.git
 
 ## Screenshot
 
- ![Weather Dashboard First](Assets/images/img_0.jpeg)    
+ ![Weather Dashboard First](Assets/images/MG_1.jpeg)    
 
- ![Weather Dashboard Second](Assets/images/img_1.jpeg)  
+ ![Weather Dashboard Second](Assets/images/MB_2.jpeg)  
 
- ![Weather Dashboard Third](Assets/images/img_2.jpeg) 
+ ![Weather Dashboard Third](Assets/images/MB_3.jpeg) 
 
- ![Weather Dashboard Third](Assets/images/img_3.jpeg) 
+ ![Weather Dashboard Fourth](Assets/images/MB_4.jpeg) 
  
 ## Resources
 [Open Weather Map_5-Day Forecast ](https://openweathermap.org/forecast5)
