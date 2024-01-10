@@ -45,24 +45,25 @@ function getWeather() {
         var lon = response[0].lon.toFixed(2);
         var lat = response[0].lat.toFixed(2);
         
-        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=" + APIkey;
+        var singleDayDataUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + APIkey;
+        var weatherQueryURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIkey;
 
         // Get Weather for Current Day
         $.ajax({
-            url: weatherQueryURL,
+            url: singleDayDataUrl,
             method: "GET"
         }).then(function (response) {
-
+            // console.log(response.city)
             var todayDiv = $('<div>').attr('class', "card today-card p-4");;
 
             // city name and date
             var cityNameAndDate = $('<h2>').text(
-                response.city.name + " (" +
-                dayjs(response.list[0].dt_txt).format('MM/DD/YY') + ")"
+                response.name + " (" +
+                dayjs.unix(response.dt).format('MM/DD/YY') + ")"
             );
 
             // icon
-            var iconCode = response.list[0].weather[0].icon;
+            var iconCode = response.weather[0].icon;
             var todayIcon = $('<img>').attr({
                 src: "https://openweathermap.org/img/w/" + iconCode + ".png",
                 height: "50px",
@@ -70,13 +71,13 @@ function getWeather() {
             });
 
             // Temperature(°C) --> (kelvin - 273.15 = °C)
-            var todaysTemp = $('<p>').text("Temperature: " + (response.list[0].main.temp_max - 273.15).toFixed(2) + " °C");
+            var todaysTemp = $('<p>').text("Temperature: " + (response.main.temp_max - 273.15).toFixed(2) + " °C");
 
             // Wind Speed(KPH)
-            var todayWind = $('<p>').text("Wind: " + response.list[0].wind.speed + " KPH");
+            var todayWind = $('<p>').text("Wind: " + response.wind.speed + " KPH");
 
             // Humidity(%)
-            var todayHumidity = $('<p>').text("Humidity: " + response.list[0].main.humidity + "%");
+            var todayHumidity = $('<p>').text("Humidity: " + response.main.humidity + "%");
 
             // append all items
             todayCard.append(todayDiv);
@@ -89,13 +90,15 @@ function getWeather() {
                 method: "GET"
             }).then(function (response) {
 
+                console.log(response)
                 // Forecast for next 5 days
                 var forecastTitle = $('<h4>').text("5-Day forecast: ");
                 $('#forecast-title').append(forecastTitle);
 
                 // Each day(8 x 3 hr):
-                for (i = 8; i < response.list.length; i++) {
-
+                // i+=8 --> i=i+8
+                for (i = 0; i < response.list.length; i+=8) {
+                    // console.log(response.list[i  ])
                     var forecastDiv = $('<div>').attr('class', "card forecast-card m-3");
                     var forecastCard = $('<div>').attr('class', "card-body");
 
@@ -135,7 +138,7 @@ function getWeather() {
                     forecastCard.append( forecastIcon, temp, humidity, windSpeed);
 
                     // add 7 to get to the next day (instead of 8 as the loop already adds 1)
-                    i = i + 6;
+                    // i = i + 6;
                 }
 
             })
